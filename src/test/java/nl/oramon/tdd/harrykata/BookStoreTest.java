@@ -85,6 +85,13 @@ public class BookStoreTest {
     }
 
     @Test
+    public void buy_ThreeSecondBooksAndTwoThirdBooks() {
+        int[] inputBooks = {3, 3, 2, 2, 2};
+
+        assertThat(bookStore.calculatePrice(inputBooks)).isEqualTo(38.40);
+    }
+
+    @Test
     public void buy_ThreeDifferentBooks_ShouldReturn21EuroAnd60CentsPrice() {
         int[] inputBooks = {1, 2, 3};
 
